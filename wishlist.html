@@ -1,0 +1,169 @@
+<!Doctype html>
+<html>
+
+  <head>
+    <meta charset="urf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <title>My wishlist</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function() {
+        
+        $(".btn").click(function() {
+        
+          if (this.value=="Add to wishlist") {
+              this.value="Remove from wishlist";
+              this.className="btn btn-danger";
+              $("#div2").append($(this).parent().parent());
+          } else {
+              $("#div1").append($(this).parent().parent());
+              this.className="btn btn-primary";
+              this.value="Add to wishlist";   
+          }
+        });
+      })
+
+    </script>
+    <style>
+      html,
+      body {
+        font-family: arial;
+      }
+
+      #div0 {
+        background-color: #4169E1;
+        color: white;
+      }
+
+      #div0 img {
+        -webkit-filter: invert(1);
+        filter: invert(1);
+        vertical-align: middle;
+      }
+
+      h1 {
+        display: inline-block;
+      }
+
+      #div1 {
+        display: inline-block;
+        width: 450px;
+        margin-bottom: 10px;
+        background: white;
+        vertical-align: top;
+        line-height: normal;
+        border: 1px;
+      }
+
+      #div2 {
+        display: inline-block;
+        width: 300px;
+        margin-bottom: 10px;
+        background: white;
+        vertical-align: top;
+        line-height: normal;
+      }
+
+      .item {
+        height: 200px;
+        border-bottom: 1px solid black;
+      }
+
+      .item p {
+        display: inline-block;
+        line-height: 1.5em;
+      }
+
+      img.game {
+        height: 90px;
+        background-color: white;
+        padding: 20px;
+        float: left;
+      }
+
+      h3 {
+        color: blue;
+        vertical-align: top;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div id="div0">
+      <h1>
+        <img src="https://image.flaticon.com/icons/svg/487/487716.svg" alt="Smiley face" height="42" width="42"> BG Wishlist
+      </h1>
+    </div>
+
+    <div id="div1">
+      <h2> BoardGames List </h2>
+
+      <div class="item">
+        <img class="game" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp6EJoxTRj8R6I1AU7p4URmm795HYaUR_vAs15K8GgZtVivRGQ">
+        <h3>
+          Navegador
+        </h3>
+
+        <p>
+          Type: strategy
+          <br /> Players number: 2-6
+          <br />
+
+          <input type="button" class="btn btn-primary" value="Add to wishlist" />
+        </p>
+      </div>
+
+      <div class="item">
+        <img class="game" src="https://images-na.ssl-images-amazon.com/images/I/61MQV7YOKwL.jpg">
+        <h3>
+          Descent
+        </h3>
+        <p>
+          Type: strategy
+          <br /> Players number: 2-6
+          <br />
+          <input type="button" class="btn btn-primary" value="Add to wishlist" />
+        </p>
+      </div>
+
+      <div class="item">
+        <img class="game" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Ly_MRr4W7hyBAyHB1rSIaz-YMP5YekztVChrbzgXs83je5QwfQ">
+        <h3>
+          Eldritch horror
+        </h3>
+        <p>
+          Type: strategy
+          <br /> Players number: 2-6
+          <br />
+
+          <input type="button" class="btn btn-primary" value="Add to wishlist" />
+        </p>
+      </div>
+    </div>
+
+    <div id="div2">
+      <h2> My wishlist </h2>
+      <div class="item">
+
+        <img class="game" src="https://images-na.ssl-images-amazon.com/images/I/812Xm7Y8f2L._SY450_.jpg">
+        <h3>
+          Fury of dracula
+        </h3>
+        <p>
+          Type: strategy
+          <br /> Players number: 2-6
+          <br />
+
+          <input type="button" class="btn btn-danger" value="Remove from wishlist" />
+        </p>
+
+      </div>
+    </div>
+  </body>
+
+</html>
+
